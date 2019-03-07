@@ -1,0 +1,17 @@
+<h1>Parent Component</h1>
+<p>Last message from child components:
+<strong>{{lastMessage}}</strong>
+</p>
+<p>Last bye message:
+    <strong>{{byeMessage}}</strong>
+</p>
+<div>
+  <input #titleInput (keyup)="onKeyUp(titleInput.value)">
+  <button (click)="changeAllTitles(titleInput.value)">
+    Change All
+  </button>
+</div>
+<hr>
+<si-child #child1 title="Child 1" (onHello)="onMessage($event)"></si-child>
+<hr>
+<si-child [title]="child2" (onHello)="onMessage($event)"></si-child>
