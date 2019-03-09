@@ -4,7 +4,13 @@
 
 export const environment = {
   production: false,
-  baseApi: 'my-base-api'
+  mockApi: true,
+  api: {
+    protocol: 'http',
+    host: 'localhost',
+    port: 8080,
+    baseApi: 'api'
+  }
 };
 
 /*

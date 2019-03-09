@@ -1,11 +1,12 @@
 import { HttpClient } from '@angular/common/http';
+import { AppSettingsUtil } from '../../utils/app-settings.util';
 
 export class BaseResourceService {
 
   resourceUrl;
 
   constructor(resourceName: string, private http: HttpClient) {
-    this.resourceUrl = '/api/' + resourceName;
+    this.resourceUrl = AppSettingsUtil.resourceApi(resourceName);
   }
 
   get() {
