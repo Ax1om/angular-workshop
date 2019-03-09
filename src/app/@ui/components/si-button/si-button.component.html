@@ -1,0 +1,8 @@
+<button
+    [type]="type"
+    class="btn {{classType}}"
+    [ngClass]="customClasses"
+>
+    <i *ngIf="icon" class="fa" [ngClass]="icon"></i>
+    {{text}}
+</button>
