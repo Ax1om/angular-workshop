@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ITableConfig } from '../../@ui/components/si-table/si-table.models';
+import { UserService } from '../../@core/services/data/user.service';
 
 @Component({
   selector: 'si-home-page',
@@ -12,23 +13,22 @@ export class HomePageComponent implements OnInit {
     header: [
       { fieldName: 'name', columnLabel: 'Name'},
       { fieldName: 'lastName', columnLabel: 'Surname'},
-      { fieldName: 'age', columnLabel: 'Age'},
+      { fieldName: 'birthday', columnLabel: 'Birthday'},
     ],
     style: {
       // tableExtendedClass: 'table-striped'
-      tableExtendedClass: 'table-dark'
+      // tableExtendedClass: 'table-dark'
     }
   };
 
-  tableData = [
-    { name: 'Mario', lastName: 'Rossi', age: 29 },
-    { name: 'Carlo', lastName: 'Magno', age: 23 },
-    { name: 'Davide', lastName: 'Rota', age: 25 },
-  ];
+  tableData;
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
+    this.userService.get().subscribe(resp => {
+      this.tableData = resp;
+    });
   }
 
 }
