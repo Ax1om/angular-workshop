@@ -5,13 +5,14 @@ import {
   SiButtonComponent,
   SiTableComponent
 } from './components';
+import { TranslateModule } from '@ngx-translate/core';
 
 const COMPONENTS = [
   SiButtonComponent,
   SiTableComponent
 ];
 
-const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule];
+const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule, TranslateModule];
 
 @NgModule({
   imports: [...BASE_MODULES],

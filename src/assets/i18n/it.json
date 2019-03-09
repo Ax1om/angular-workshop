@@ -1,0 +1,7 @@
+{
+  "global": {
+    "name": "Nome",
+    "lastName": "Cognome",
+    "birthday": "Data di nascita"
+  }
+}

@@ -13,7 +13,7 @@ const SERVICES = [
   imports: [
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false, delay: 500 }
+      InMemoryDataService, { dataEncapsulation: false, delay: 500, passThruUnknownUrl: true }
     )
   ],
   providers: [

@@ -11,9 +11,9 @@ export class HomePageComponent implements OnInit {
 
   tableConfig: ITableConfig = {
     header: [
-      { fieldName: 'name', columnLabel: 'Name'},
-      { fieldName: 'lastName', columnLabel: 'Surname'},
-      { fieldName: 'birthday', columnLabel: 'Birthday'},
+      { fieldName: 'name', columnLabel: 'global.name'},
+      { fieldName: 'lastName', columnLabel: 'global.lastName'},
+      { fieldName: 'birthday', columnLabel: 'global.birthday'},
     ],
     style: {
       // tableExtendedClass: 'table-striped'
