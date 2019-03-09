@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { SiButtonComponent } from './components';
+import {
+  SiButtonComponent,
+  SiTableComponent
+} from './components';
 
 const COMPONENTS = [
-  SiButtonComponent
+  SiButtonComponent,
+  SiTableComponent
 ];
 
 const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule];

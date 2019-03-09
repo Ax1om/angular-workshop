@@ -1,0 +1,12 @@
+<table class="table" [ngClass]="config.style?.tableExtendedClass">
+    <thead [ngClass]="config.style?.theadClass">
+        <tr>
+            <th scope="col" *ngFor="let header of config.header">{{header.columnLabel}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of data">
+            <td *ngFor="let header of config.header">{{row[header.fieldName]}}</td>
+        </tr>
+    </tbody>
+</table>

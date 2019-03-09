@@ -2,9 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'si-pages',
-  template: `
-    <router-outlet></router-outlet>
-  `,
+  template: '<div class="container"><router-outlet></router-outlet></div>',
 })
 export class PagesComponent {
 
