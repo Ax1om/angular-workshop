@@ -1,0 +1,20 @@
+<p>
+  about-page works!
+</p>
+<h3>{{message}}</h3>
+
+<!--<p>{{body$ | async}}</p>-->
+<ul>
+  <!-- without subscribe, we let async pipe to do the subscribe for us -->
+  <li *ngFor="let user of body | async">{{user.name}}</li>
+  <!-- with subscribe -->
+  <!--<li *ngFor="let user of body">{{user}}</li>-->
+</ul>
+<button type="button" (click)="cdDefault()">
+  Change Detection: Default
+</button>
+<button type="button" (click)="cdPush()">
+  Change Detection: OnPush
+</button>
+
+<si-change-detect [user]="user"></si-change-detect>

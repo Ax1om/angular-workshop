@@ -1,1 +1,6 @@
-<si-parent></si-parent>
+<h1 [siHighlight] *siRepeat="3; let myVar=pippo">App Component - {{myVar}}</h1>
+<nav>
+  <a [style.padding.px]="10" routerLink="parent">Go to parent</a>
+  <a [style.padding.px]="10" [routerLink]="['about', { message: 'helloWorld' }]">Go to About</a>
+</nav>
+<router-outlet></router-outlet>
