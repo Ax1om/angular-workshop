@@ -1,0 +1,32 @@
+<h1>Insert User</h1>
+<form [formGroup]="userFromGroup" (submit)="submitForm()">
+  <label>
+    name:
+    <input type="text" formControlName="name">
+  </label>
+  <div [style.color]="'red'" *ngIf="!userFromGroup.controls.name.valid">required</div>
+  <br>
+  <label>
+    surname:
+    <input type="text" formControlName="surname">
+  </label>
+  <br>
+  <label>
+    country:
+    <input type="text" formControlName="country">
+  </label>
+  <br>
+  <label>
+    email:
+    <input type="email" formControlName="email">
+  </label>
+  <div [style.color]="'red'" *ngIf="userFromGroup.controls.email.errors?.required">required</div>
+  <div [style.color]="'red'" *ngIf="userFromGroup.controls.email.errors?.email">must be email</div>
+  <br>
+  <button type="submit" [disabled]="!userFromGroup.valid">Submit</button>
+  <br>
+  <span>{{user | json}}</span>
+</form>
+
+
+<p>{{  birthday | date:'fullDate' | uppercase}}</p>

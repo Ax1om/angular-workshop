@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MessageService } from '../message.service';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'si-about-page',
@@ -22,8 +23,15 @@ export class AboutPageComponent implements OnInit {
   ngOnInit(): void {
     // pass the observable
     this.body = this.messageService.getAbout();
+    // this.messageService.getAbout().subscribe(console.log);
     // we manually subscribe for the result
-    // this.messageService.getAbout().subscribe( resp => { this.body = resp; });
+    // this.messageService.getAbout().subscribe( resp => {
+    //   this.body = resp;
+    //   this.body.push({
+    //     name: 'dsada'
+    //   });
+    // });
+
   }
 
   cdDefault(): void {

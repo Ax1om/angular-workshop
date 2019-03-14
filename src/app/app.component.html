@@ -1,6 +1,10 @@
 <h1 [siHighlight] *siRepeat="3; let myVar=pippo">App Component - {{myVar}}</h1>
+<h2>{{'Hello World' | dash}}</h2>
+<h2>{{'Hello World' | dash: '*'}}</h2>
 <nav>
   <a [style.padding.px]="10" routerLink="parent">Go to parent</a>
   <a [style.padding.px]="10" [routerLink]="['about', { message: 'helloWorld' }]">Go to About</a>
+  <a [style.padding.px]="10" routerLink="user-insert">User Insert</a>
+  <a [style.padding.px]="10" routerLink="skill-insert">Skill Insert</a>
 </nav>
 <router-outlet></router-outlet>

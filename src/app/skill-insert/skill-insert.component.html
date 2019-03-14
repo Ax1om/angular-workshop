@@ -1,0 +1,23 @@
+<h1>Insert Skill</h1>
+<form #formSkill="ngForm" (submit)="submitForm()">
+  <label>
+    name:
+    <input #nameI="ngModel" name="name" type="text" [(ngModel)]="skill.name" required>
+  </label>
+  <div [style.color]="'red'" *ngIf="!nameI.valid">required</div>
+  <br>
+  <label>
+    category:
+    <input #categoryI="ngModel" name="category" type="text" [(ngModel)]="skill.category" required>
+  </label>
+
+  <label>
+    valid:
+    <input #categoryI="ngModel" name="valid" type="checkbox" [(ngModel)]="skill.valid" required>
+  </label>
+  <div [style.color]="'red'" *ngIf="!categoryI.valid">required</div>
+  <br>
+  <button type="submit" [disabled]="!formSkill.form.valid">Submit</button>
+  <br>
+  <span>{{skill | json}}</span>
+</form>
