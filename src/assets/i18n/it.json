@@ -2,6 +2,17 @@
   "global": {
     "name": "Nome",
     "lastName": "Cognome",
-    "birthday": "Data di nascita"
+    "birthday": "Data di nascita",
+    "email": "Email",
+    "username": "Utente",
+    "required": "*Campo obbligatorio",
+    "save": "Salva",
+    "cancel": "Annulla"
+  },
+  "pages": {
+    "user-crud": {
+      "list-title": "Lista utenti",
+      "upsert-title": "Crea / modifica utente"
+    }
   }
 }

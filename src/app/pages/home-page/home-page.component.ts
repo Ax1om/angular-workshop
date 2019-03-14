@@ -9,26 +9,10 @@ import { UserService } from '../../@core/services/data/user.service';
 })
 export class HomePageComponent implements OnInit {
 
-  tableConfig: ITableConfig = {
-    header: [
-      { fieldName: 'name', columnLabel: 'global.name'},
-      { fieldName: 'lastName', columnLabel: 'global.lastName'},
-      { fieldName: 'birthday', columnLabel: 'global.birthday'},
-    ],
-    style: {
-      // tableExtendedClass: 'table-striped'
-      // tableExtendedClass: 'table-dark'
-    }
-  };
-
-  tableData;
-
-  constructor(private userService: UserService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.userService.get().subscribe(resp => {
-      this.tableData = resp;
-    });
+
   }
 
 }

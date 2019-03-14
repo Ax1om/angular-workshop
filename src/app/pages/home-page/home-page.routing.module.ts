@@ -16,7 +16,6 @@ export const routedComponents = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
   providers: []
 })
 export class HomePageRoutingModule {}

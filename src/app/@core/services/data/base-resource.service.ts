@@ -17,4 +17,8 @@ export class BaseResourceService {
     const url = this.resourceUrl + '/' + id;
     return this.http.get(url);
   }
+
+  save(resourceObject: any) {
+    return this.http.post(this.resourceUrl, resourceObject);
+  }
 }
