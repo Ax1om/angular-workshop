@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { IButtonConfig } from '@ui/components/si-button/si-button.models';
 
 @Component({
   selector: 'si-button',
@@ -22,6 +23,16 @@ export class SiButtonComponent implements OnInit {
 
   @Input()
   customClasses;
+
+  @Input()
+  disabled = false;
+
+  @Input()
+  set config(conf: IButtonConfig){
+    this.text = conf.text || this.text;
+    this.icon = conf.icon || this.icon;
+    this.classType = conf.classType || this.classType;
+  }
 
   constructor() { }
 

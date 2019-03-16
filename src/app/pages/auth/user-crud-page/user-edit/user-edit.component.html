@@ -1,5 +1,5 @@
 <h1>{{'pages.user-crud.upsert-title' | translate}}</h1>
-<form novalidate="">
+<form #form="ngForm" novalidate="">
     <div class="form-group">
         <label for="name">{{'global.name' | translate}}</label>
         <input
@@ -77,5 +77,5 @@
         </span>
     </div>
     <si-button routerLink=".." text="{{'global.cancel' | translate }}"></si-button>
-    <si-button (click)="onSubmit()" text="{{'global.save' | translate}}"></si-button>
+    <si-button [disabled]="!form.valid" (click)="onSubmit()" text="{{'global.save' | translate}}"></si-button>
 </form>

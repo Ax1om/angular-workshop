@@ -12,7 +12,8 @@ export class UserEditComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private userService: UserService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ) {
     this.user = this.activatedRoute.snapshot.data.user || {};
   }
@@ -23,7 +24,7 @@ export class UserEditComponent implements OnInit {
   onSubmit() {
     this.user.birthday = new Date(this.user.birthday).toISOString();
     this.userService.save(this.user).subscribe(() => {
-      this.router.navigate(['/pages/user-crud'])
+      this.router.navigate(['..'], {relativeTo: this.route})
     });
   }
 

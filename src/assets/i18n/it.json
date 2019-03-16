@@ -7,7 +7,9 @@
     "username": "Utente",
     "required": "*Campo obbligatorio",
     "save": "Salva",
-    "cancel": "Annulla"
+    "cancel": "Annulla",
+    "actions": "Azioni",
+    "add": "Aggiungi"
   },
   "pages": {
     "user-crud": {
@@ -18,5 +20,10 @@
   "menu": {
     "home": "HomePage",
     "user-crud": "Gestione Utenti"
+  },
+  "component": {
+    "si-table": {
+      "confirm-delete": "Sei sicuro di voler elimare questo elemento?"
+    }
   }
 }

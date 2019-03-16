@@ -19,6 +19,11 @@ const routes: Routes = [
     }
   },
   {
+    path: 'edit',
+    redirectTo: '',
+    pathMatch: 'full'
+  },
+  {
     path: 'new',
     component: UserEditComponent,
     children: [],

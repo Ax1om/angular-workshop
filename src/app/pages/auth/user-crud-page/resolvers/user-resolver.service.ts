@@ -14,7 +14,7 @@ export class UserResolverService implements Resolve<any> {
 
     return this.userService.getOneById(id).pipe(
       catchError((err) => {
-        this.router.navigate(['/pages/user-crud/new'],  { replaceUrl: true });
+        this.router.navigate(['/pages/auth/user-crud/new'],  { replaceUrl: true });
         return EMPTY;
       })
     );
