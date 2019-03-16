@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ITableConfig } from '../../@ui/components/si-table/si-table.models';
-import { UserService } from '../../@core/services/data/user.service';
 
 @Component({
   selector: 'si-home-page',

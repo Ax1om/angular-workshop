@@ -2,7 +2,7 @@ import { ActivatedRouteSnapshot, Resolve, Router, RouterStateSnapshot } from '@a
 import { catchError } from 'rxjs/operators';
 import { EMPTY } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { UserService } from '../../../../@core/services/data/user.service';
+import { UserService } from '@core/services/data/user.service';
 
 @Injectable()
 export class UserResolverService implements Resolve<any> {

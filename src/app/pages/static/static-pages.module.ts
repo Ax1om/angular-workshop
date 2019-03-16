@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { UiModule } from '../../@ui/ui.module';
 import { routedComponents, StaticPagesRoutingModule } from './static-pages.routing.module';
+import { UiModule } from '@ui/ui.module';
 
 @NgModule({
   imports: [
