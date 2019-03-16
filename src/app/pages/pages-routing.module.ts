@@ -12,8 +12,8 @@ const routes: Routes = [
         loadChildren: './home-page/home-page.module#HomePageModule'
       },
       {
-        path: 'user-crud',
-        loadChildren: './user-crud-page/user-crud-page.module#UserCrudPageModule'
+        path: 'auth',
+        loadChildren: './auth/auth-pages.module#AuthPagesModule'
       },
       {
         path: 'static',
