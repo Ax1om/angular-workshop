@@ -1,0 +1,10 @@
+<div
+    *ngIf="(numRequest$ | async ) > 0"
+    class="si-loader__overlay d-flex justify-content-center align-items-center">
+    <div class="si-loader__spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>

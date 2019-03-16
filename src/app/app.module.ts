@@ -5,6 +5,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { CoreModule } from '@core/core.module';
+import { SiLoaderModule } from '@core/si-loader/si-loader.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -17,6 +18,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   imports: [
     AppRoutingModule,
     CoreModule,
+    SiLoaderModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
