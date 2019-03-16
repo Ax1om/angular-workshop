@@ -14,5 +14,9 @@
       "list-title": "Lista utenti",
       "upsert-title": "Crea / modifica utente"
     }
+  },
+  "menu": {
+    "home": "HomePage",
+    "user-crud": "Gestione Utenti"
   }
 }

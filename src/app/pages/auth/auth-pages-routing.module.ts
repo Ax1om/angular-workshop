@@ -8,12 +8,16 @@ const routes: Routes = [
     component: AuthPagesComponent,
     children: [
       {
+        path: 'home',
+        loadChildren: './home-page/home-page.module#HomePageModule'
+      },
+      {
         path: 'user-crud',
         loadChildren: './user-crud-page/user-crud-page.module#UserCrudPageModule'
       },
       {
         path: '',
-        redirectTo: 'user-crud',
+        redirectTo: 'home',
         pathMatch: 'full',
       }
     ]
@@ -25,4 +29,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AuthPagesRoutingModule { }
+export class AuthPagesRoutingModule {
+}

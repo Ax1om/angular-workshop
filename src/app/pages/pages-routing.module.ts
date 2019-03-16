@@ -8,10 +8,6 @@ const routes: Routes = [
     component: PagesComponent,
     children: [
       {
-        path: 'home',
-        loadChildren: './home-page/home-page.module#HomePageModule'
-      },
-      {
         path: 'auth',
         loadChildren: './auth/auth-pages.module#AuthPagesModule'
       },
@@ -21,7 +17,7 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: 'home',
+        redirectTo: 'auth',
         pathMatch: 'full',
       },
       {

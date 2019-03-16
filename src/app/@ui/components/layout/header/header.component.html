@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Si2001</a>
+  <button class="navbar-toggler" type="button" (click)="showMenu = !showMenu">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" [class.show]="showMenu">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" *ngFor="let item of items">
+        <a class="nav-link"
+           (click)="showMenu = false;"
+           [routerLink]="item.path"
+           routerLinkActive="active">
+          {{item.name | translate}}
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
