@@ -1,0 +1,6 @@
+<h1>{{'pages.resource-page.' + currentResource + '.list-title' | translate}}</h1>
+
+<si-table
+    [config]="pageConfig[currentResource].tableConfig"
+    [data]="resourceDataList"
+></si-table>

@@ -16,6 +16,10 @@ const routes: Routes = [
         loadChildren: './user-crud-page/user-crud-page.module#UserCrudPageModule'
       },
       {
+        path: 'crud/:resource',
+        loadChildren: './crud-resource-page/crud-resource-page.module#CrudResourcePageModule'
+      },
+      {
         path: '',
         redirectTo: 'home',
         pathMatch: 'full',

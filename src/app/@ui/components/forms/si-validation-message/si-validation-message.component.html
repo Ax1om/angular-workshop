@@ -1,0 +1,5 @@
+<ng-container class="errors-list" *ngIf="control && control.errors">
+  <div *ngFor="let error of errors" class="invalid-feedback">
+    {{ ('validators.' + error) | translate: controlModel }}
+  </div>
+</ng-container>

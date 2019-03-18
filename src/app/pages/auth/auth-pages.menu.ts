@@ -5,6 +5,6 @@ export const AUTH_PAGES_MENU = [
   },
   {
     name: 'menu.user-crud',
-    path: 'user-crud'
+    path: ['crud', 'users']
   }
 ];

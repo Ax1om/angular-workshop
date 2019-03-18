@@ -15,7 +15,17 @@
     "user-crud": {
       "list-title": "Lista utenti",
       "upsert-title": "Crea / modifica utente"
+    },
+    "resource-page": {
+      "users": {
+        "list-title": "Lista utenti",
+        "upsert-title": "Crea / Modifica utente"
+      }
     }
+  },
+  "validators": {
+    "required": "*Campo {{label}} obbligatorio",
+    "email": "*Email non valida"
   },
   "menu": {
     "home": "HomePage",

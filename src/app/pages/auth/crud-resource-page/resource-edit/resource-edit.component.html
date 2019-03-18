@@ -1,0 +1,17 @@
+<h1>{{'pages.resource-page.' + currentResource + '.upsert-title' | translate}}</h1>
+
+<form [formGroup]="formGroup">
+
+    <ng-container *ngFor="let controlModel of formModel">
+        <dynamic-bootstrap-form-control
+                [group]="formGroup"
+                [model]="controlModel"
+                [asBootstrapFormGroup]="true"
+                #componentRef
+        >
+            <si-validation-message [controlModel]="controlModel" [control]="componentRef.control"></si-validation-message>
+        </dynamic-bootstrap-form-control>
+    </ng-container>
+    <si-button routerLink=".." text="{{'global.cancel' | translate }}"></si-button>
+    <si-button [disabled]="!formGroup.valid" (click)="onSubmit()" text="{{'global.save' | translate}}"></si-button>
+</form>
