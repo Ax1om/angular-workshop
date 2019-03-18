@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthPagesComponent } from './auth-pages.component';
+import { ResourceGuardService } from './crud-resource-page/guards/resource-guard.service';
 
 const routes: Routes = [
   {
@@ -13,7 +14,8 @@ const routes: Routes = [
       },
       {
         path: 'crud/:resource',
-        loadChildren: './crud-resource-page/crud-resource-page.module#CrudResourcePageModule'
+        loadChildren: './crud-resource-page/crud-resource-page.module#CrudResourcePageModule',
+        canActivate: [ResourceGuardService]
       },
       {
         path: '',
