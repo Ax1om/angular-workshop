@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { USERS } from './mock-data/users.data.mock';
+import { SKILLS } from '@core/services/mock/mock-data/skills.data.mock';
 declare var Math;
 @Injectable()
 export class InMemoryDataService implements InMemoryDbService {
@@ -10,7 +11,8 @@ export class InMemoryDataService implements InMemoryDbService {
 
   createDb() {
     return {
-      users: USERS
+      users: USERS,
+      skills: SKILLS
     };
   }
 

@@ -6,5 +6,9 @@ export const AUTH_PAGES_MENU = [
   {
     name: 'menu.user-crud',
     path: ['crud', 'users']
+  },
+  {
+    name: 'menu.skill-crud',
+    path: ['crud', 'skills']
   }
 ];

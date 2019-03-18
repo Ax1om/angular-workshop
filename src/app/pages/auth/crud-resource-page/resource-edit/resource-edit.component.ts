@@ -39,7 +39,9 @@ export class ResourceEditComponent implements OnInit {
 
   onSubmit() {
     const resourceDTO = this.formGroup.value;
-    resourceDTO.birthday = new Date(resourceDTO.birthday).toISOString();
+    if (resourceDTO.birthday) {
+      resourceDTO.birthday = new Date(resourceDTO.birthday).toISOString();
+    }
     this.resourceService.save(this.currentResource, resourceDTO).subscribe(() => {
       this.router.navigate(['..'], {relativeTo: this.route});
     });

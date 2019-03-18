@@ -9,7 +9,8 @@
     "save": "Salva",
     "cancel": "Annulla",
     "actions": "Azioni",
-    "add": "Aggiungi"
+    "add": "Aggiungi",
+    "category": "Categoria"
   },
   "pages": {
     "user-crud": {
@@ -20,6 +21,10 @@
       "users": {
         "list-title": "Lista utenti",
         "upsert-title": "Crea / Modifica utente"
+      },
+      "skills": {
+        "list-title": "Lista Compenteze",
+        "upsert-title": "Crea / Modifica competenza"
       }
     }
   },
@@ -29,7 +34,8 @@
   },
   "menu": {
     "home": "HomePage",
-    "user-crud": "Gestione Utenti"
+    "user-crud": "Gestione Utenti",
+    "skill-crud": "Gestione Competenze"
   },
   "component": {
     "si-table": {
