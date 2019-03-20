@@ -12,7 +12,9 @@
     "add": "Aggiungi",
     "category": "Categoria",
     "login": "Accedi",
-    "password": "Password"
+    "password": "Password",
+    "logout": "Esci",
+    "welcome-message": "Benvenuto {{name}} {{lastName}}"
   },
   "pages": {
     "user-crud": {

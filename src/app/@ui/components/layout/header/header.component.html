@@ -15,5 +15,13 @@
         </a>
       </li>
     </ul>
+
+    <select class="form-control w-auto mr-3" [(ngModel)]="currentLang" (ngModelChange)="onLangChange($event)">
+      <option *ngFor="let lang of langs">{{lang}}</option>
+    </select>
+    <span class="navbar-text">
+      {{'global.welcome-message' | translate: user}}
+    </span>
+    <si-button [customClasses]="'btn-sm'" [text]="'global.logout' | translate" (click)="logout()"></si-button>
   </div>
 </nav>
