@@ -10,7 +10,9 @@
     "cancel": "Annulla",
     "actions": "Azioni",
     "add": "Aggiungi",
-    "category": "Categoria"
+    "category": "Categoria",
+    "login": "Accedi",
+    "password": "Password"
   },
   "pages": {
     "user-crud": {

@@ -1,0 +1,8 @@
+<div class="login-page">
+  <div class="login-container">
+    <form [formGroup]="formGroup">
+      <dynamic-bootstrap-form [group]="formGroup" [model]="formModel"></dynamic-bootstrap-form>
+      <si-button [text]="'global.login' | translate" (click)="doLogin()"></si-button>
+    </form>
+  </div>
+</div>

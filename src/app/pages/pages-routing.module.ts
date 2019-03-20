@@ -1,6 +1,8 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { PagesComponent } from './pages.component';
+import { AuthGuard } from './pages.guards';
+import { AccountResolver } from './pages.resolvers';
 
 const routes: Routes = [
   {
@@ -9,7 +11,11 @@ const routes: Routes = [
     children: [
       {
         path: 'auth',
-        loadChildren: './auth/auth-pages.module#AuthPagesModule'
+        loadChildren: './auth/auth-pages.module#AuthPagesModule',
+        canActivate: [AuthGuard],
+        resolve: {
+          user: AccountResolver
+        }
       },
       {
         path: 'static',
